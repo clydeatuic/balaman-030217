@@ -9,7 +9,7 @@ function x(){
 
 $(function(){
 	$.ajax({
-		url:"http://www.omdbapi.com/?t=Game%20of%20Thrones"
+		url:"https://www.omdbapi.com/?t=Game%20of%20Thrones"
 	}).done(function(data){
 		console.log(data);
 		let html = `
