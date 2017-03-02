@@ -1,118 +1,53 @@
-# Activity 1
-Web Dev't Boilerplate Setup using Express
+#Activity 2
+Web Dev't Boilerplate Setup using Express (The other way!)
 
-## 1. Setup Tools
-* Verify nodeJS version. ```$ node --version```
-* Verify npm version. ```$ npm --version```
-* Verify git version. ```$ git --version```
-* Verify sublime version. ```$ subl --version```
-
-## 2. Setup Web App Framework (Express JS)
-* Create a local repository. ```$ cd desktop && mkdir lastname-022317 && cd lastname-022317```
-* Launch sublime text editor. ```$ subl .```
-* Create ```package.json```. ```$ npm init -y```
-* Install express as dependency. ```$ npm install express --save```
-* Create simple express directory tree. ```$ mkdir public && mkdir views```
-```
-+-- lastname-022317
-| +-- node_modules
-| +-- public
-| | +-- css
-| | | `-- app.css
-| | +-- img
-| | | `-- winteriscomming.jpg
-| | +-- js
-| | | `-- app.js
-| +-- views
-| | `-- 404.html
-| | `-- app.html
-| `-- .gitignore
-| `-- package.json
-| `-- Procfile
-| `-- README.md
-| `-- server.js
-
-```
-
-```javascript
-//server.js
-//require modules
-var express = require('express');
-var path = require('path');
-//instantiate express
-var app = express();
-//set port
-app.set('port', (process.env.PORT || 5000));
-//use static files
-app.use(express.static(path.join(__dirname, 'public')));
-//express routes
-app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'views/app.html'));
-});
-app.get('/about', function(req, res){
-  res.sendFile(path.join(__dirname, 'views/about.html'));
-});
-app.get('*', function(req, res){
-  res.status(404).sendFile(path.join(__dirname, 'views/404.html'));
-});
-//express server listen
-var server = app.listen(app.get('port'), function(){
-  console.log('Server listening on port ',app.get('port'));
-});
-```
-
-```html
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-	<title>My Web App</title>
-</head>
-<body>
-	<h1>Welcome to my web app!</h1>
-	<img src="img/winteriscoming.jpg" />
-
-	<br>
-	<a href="/">Home</a> |
-	<a href="/about">About</a>
-</body>
-</html>
-```
-
-```html
-<!--404.html-->
-<!DOCTYPE html>
-<html>
-<head>
-	<title>404 Page</title>
-</head>
-<body>
-	<h1>Error 404: Page cannot be found!</h1>
-	<p>Click <a href="/">here</a> to return to main page</p>
-</body>
-</html>
-```
-
-* Download images [here](https://drive.google.com/drive/folders/0By-aduulSKAMU3RxUm16Vm04cU0?usp=sharing)
-
-## 3. Upload files to remote repository (Github)
-* Create new github remote repository
-* Open ```.gitignore``` file and write ```node_modules``` inside.
-* ```$ git init```
-* ```$ git config user.email "youremailusedingithub@domain.com"```
-* ```$ git config user.name "yourgithubname"```
-* ```$ git status```
+##Setup Steps
+* ```$ node --version && npm --version && git --version && heroku --version```
+* ```$ set path=%PATH%;yoursublimepath; && subl --version```
+* ```$ git clone https://github.com/clydeatuic/webdevatuic.git reponame```. Note: reponame format ```lastname-MMDDYY```
+* ```$ cd reponame```
+* Create new github repository. Follow the reponame format e.g. ```Balaman-030217```.
 * ```$ git add .```
-* ```$ git commit -m "my first commit"```
-* ```$ git remote add origin https://github.com/yourgithubusername/yourgithubrepo.git```
-* ```$ git push -u origin master```
-* Open your web app at http://localhost:5000 ```$ node server.js```
-
-## 4. Deploy to heroku
+* ```$ git commit -m "any message here"```
+* ```$ git remote add reponame https://github.com/yourgithub-username/reponame.git```
+* ```$ git push -u reponame master```
 * ```$ heroku login```
-* ```$ heroku create lastname-022217```
-* ```$ git status```
-* ```$ git add .```
-* ```$ git commit -m "deploy to heroku"```
+* ```$ heroku create reponame```
 * ```$ git push -u heroku master```
 * ```$ heroku open```
+
+##Development Steps
+* ```$ git add . && git commit -m "any message here"```
+* ```$ git push -u reponame master```
+* ```$ node server.js```
+
+##Deploy Steps
+* ```$ git push -u heroku master && heroku open```
+
+##Links
+* http://patron-030217.herokuapp.com/JSON
+* http://tenajeros-030217.herokuapp.com/json
+* http://villaabrille-030217.herokuapp.com/json
+* http://francisco-030217.herokuapp.com/JSON
+* http://santos-030217.herokuapp.com/contact
+
+##On Progress
+* http://carcueva-030217-3.herokuapp.com/
+* http://custodio-030217.herokuapp.com/
+
+##Assignment
+* http://wong-030217.herokuapp.com/
+* http://montegrande-030217.herokuapp.com/
+* http://patron-030117.herokuapp.com/
+* http://villegas-030217.herokuapp.com/
+* http://jpregua-webapp.herokuapp.com/
+* http://ronchifloyd-webapp.herokuapp.com/
+* http://santos-dota2cosmo.herokuapp.com/
+* http://viiazure.herokuapp.com/
+* http://poypoy.herokuapp.com/
+* http://briones-030217.herokuapp.com/
+* http://ho-020317.herokuapp.com/
+* http://gabriento.herokuapp.com/
+* http://francisco-assignment030217.herokuapp.com/
+* http://viray-tomorrow3.herokuapp.com
+* http://hydrapc.herokuapp.com/home
