@@ -2,8 +2,11 @@
 Web Dev't Boilerplate Setup using Express (The other way!)
 
 ##Setup Steps
-* ```$ node --version && npm --version && git --version && heroku --version```
-* ```$ set path=%PATH%;yoursublimepath; && subl --version```
+* ```$ node --version && npm --version```
+* ```$ git --version```
+* ```$ heroku --version```
+* ```$ set path=%PATH%;yoursublimepath;```
+* ```$ subl --version```
 * ```$ git clone https://github.com/clydeatuic/webdevatuic.git reponame```. Note: reponame format ```lastname-MMDDYY```
 * ```$ cd reponame```
 * Create new github repository. Follow the reponame format e.g. ```Balaman-030217```.
@@ -22,7 +25,8 @@ Web Dev't Boilerplate Setup using Express (The other way!)
 * ```$ node server.js```
 
 ##Deploy Steps
-* ```$ git push -u heroku master && heroku open```
+* ```$ git push -u heroku master```
+* ```$ heroku open```
 
 ##Links
 * http://patron-030217.herokuapp.com/JSON
